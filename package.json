@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/index.js"
+    "start": "node server/index.js", 
+    "build": "echo 'No build step'"
+  },
+  "engines": {
+    "node": "18.17.1"
   },
   "keywords": [],
   "author": "",
