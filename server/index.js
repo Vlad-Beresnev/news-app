@@ -1,6 +1,7 @@
 const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
+const helmet = require('helmet');
 
 const PORT = process.env.PORT || 3001;
 //beresnev.explorer
@@ -20,6 +21,17 @@ let n = 0;
 const app = express();
 
 app.use(cors());
+
+app.use(helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        styleSrc: ["'self'", 'https://fonts.googleapis.com'],
+        fontSrc: ["'self'", 'https://fonts.gstatic.com'],
+        // Add other directives as needed
+      },
+    },
+  }));
 
 //app.use(express.static(path.resolve(__dirname, '../client/build')));
 
