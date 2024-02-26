@@ -25,7 +25,7 @@ const News = () => {
 
     const fetchNews = async (params) => {
         try {
-            const response = await axios.get('http://localhost:3001/news', { params });
+            const response = await axios.get('https://news-app-pz9q.onrender.com/news', { params });
             setNews(response.data.articles);
             console.log(response.data.articles);
         } catch(error) {
