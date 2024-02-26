@@ -14,9 +14,6 @@
     "webpack": "^5.90.3",
     "webpack-dev-server": "^4.15.1"
   },
-  "devServer": {
-    "disableHostCheck": true
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
