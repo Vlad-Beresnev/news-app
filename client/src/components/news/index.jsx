@@ -6,7 +6,8 @@ import { faCalendar } from '@fortawesome/free-solid-svg-icons'
 
 
 const LOCAL_URL = 'http://localhost:3001/news';
-const REAL_URL = 'https://news-app-pz9q.onrender.com/news';
+const RENDER_URL = 'https://news-app-pz9q.onrender.com/news';
+const RAILWAY_URL = 'https://news-app-production-8955.up.railway.app/news';
 
 const News = () => {
     const [news, setNews] = useState([]);
@@ -31,7 +32,7 @@ const News = () => {
 
     const fetchNews = async (params) => {
         try {
-            const response = await axios.get(REAL_URL, { params });
+            const response = await axios.get(RAILWAY_URL, { params });
             setNews(response.data.articles);
             console.log(response.data.articles);
         } catch(error) {
