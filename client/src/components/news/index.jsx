@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './index.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCalendar } from '@fortawesome/free-solid-svg-icons'
+
+
+const LOCAL_URL = 'http://localhost:3001/news';
+const REAL_URL = 'https://news-app-pz9q.onrender.com/news';
 
 const News = () => {
     const [news, setNews] = useState([]);
@@ -25,7 +31,7 @@ const News = () => {
 
     const fetchNews = async (params) => {
         try {
-            const response = await axios.get('https://news-app-pz9q.onrender.com/news', { params });
+            const response = await axios.get(REAL_URL, { params });
             setNews(response.data.articles);
             console.log(response.data.articles);
         } catch(error) {
@@ -51,7 +57,7 @@ const News = () => {
             <div className="container">
             <h1>News</h1>
             <div className="selectionContainer">
-                <label htmlFor="category">Choose Category</label>
+                <label htmlFor="category">Choose Topic</label>
                 <select id="category" value={currentCategory} onChange={handleCategoryChange}>
                     <option value="business">Business</option>
                     <option value="entertainment">Entertainment</option>
@@ -95,7 +101,13 @@ const News = () => {
                     <option value="zh">Chinese</option>
                 </select>
                 <input name="from" placeholder="date from" type="date" value={fromValue} onChange={e => setFromValue(e.target.value)}/>
+                <label for="date-input" class="icon-label">
+                <FontAwesomeIcon icon={faCalendar} />
+                </label>
                 <input name="to" placeholder="date to" type="date" value={toValue} onChange={e => setToValue(e.target.value)} />
+                <label for="date-input" class="icon-label">
+                <FontAwesomeIcon icon={faCalendar} />
+                </label>
             </div>
             <div className="newsContainer">
                 {news.map((article, index) => (

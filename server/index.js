@@ -35,10 +35,6 @@ app.use(helmet({
 
 //app.use(express.static(path.resolve(__dirname, '../client/build')));
 
-app.get("/api", (req, res) => {
-    res.json({ message: "Hello from servers!" });
-});
-
 app.get("/news", async (req, res) => {
     try {
         const { isSearching, category, keyword, sortBy, language, from, to } = req.query; 
