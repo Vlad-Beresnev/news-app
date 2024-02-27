@@ -55,7 +55,7 @@ const News = () => {
     return (
         <>
             <div className="container">
-            <h1>News</h1>
+            <h1>News Matter</h1>
             <div className="selectionContainer">
                 <label htmlFor="category">Choose Topic</label>
                 <select id="category" value={currentCategory} onChange={handleCategoryChange}>
