@@ -5,15 +5,15 @@ const helmet = require('helmet');
 
 const PORT = process.env.PORT || 3001;
 //beresnev.explorer
-const API_KEY_EX = '8fb05a75535a4174b04a5fab022be346'
+const API_KEY_EX = process.env.API_KEY_EX
 //beresnev2003vladislav
-const API_KEY_B2003 = 'e17d7e997782469d864cd7023b8ad25d'
+const API_KEY_B2003 = process.env.API_KEY_B2003
 //natalberesneva
-const API_KEY_NATBER = 'ef7463e349fc41afb7cd98df8ef86898'
+const API_KEY_NATBER = process.env.API_KEY_NATALBER
 //evgenstarex
-const API_KEY_EVREX = '95eaccec17964239ab52eb71be5aa635'
+const API_KEY_EVREX = process.env.API_KEY_EVREX
 //evgenstarexfi
-const API_KEY_EVREXFI = '362edcc26db942f494032cfd9d6b6a93'
+const API_KEY_EVREXFI = process.env.API_KEY_EVREXFI
 
 const apiKeys = [API_KEY_EX, API_KEY_B2003, API_KEY_NATBER, API_KEY_EVREX, API_KEY_EVREXFI]
 let n = 0;
