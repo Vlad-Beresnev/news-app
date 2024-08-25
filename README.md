@@ -7,7 +7,7 @@ To address this issue, I aim to create "News Matter." This platform will allow u
 
 ### Installation
 Simply follow the link to enjoy fast and clean news.
-https://statistics-news.netlify.app/
+https://news.vladberesnev.com
 
 ### Usage
 
